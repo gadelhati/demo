@@ -39,7 +39,7 @@ public class TutorialControllerThymeleaf {
     }
     @GetMapping("/retrieve")
     public ModelAndView findAll() {
-        return new ModelAndView("/tutorial").addObject("tutorials", serviceTutorial.retrieve());
+        return new ModelAndView("tutorial").addObject("tutorials", serviceTutorial.retrieve());
     }
     @GetMapping("/update/{id}")
     public ModelAndView update(@PathVariable("id") Long id) {
@@ -47,7 +47,7 @@ public class TutorialControllerThymeleaf {
     }
     @GetMapping("/add")
     public ModelAndView add(Tutorial tutorial) {
-        return new ModelAndView("/tutorialADD").addObject("tutorial", tutorial);
+        return new ModelAndView("tutorialADD").addObject("tutorial", tutorial);
     }
     @GetMapping("/delete/{id}")
     public ModelAndView delete(@PathVariable("id") @NotBlank Long id) {
