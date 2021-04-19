@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 /**
  * @author	Marcelo Ribeiro Gadelha
- * @mail	marcelo.gadelha@marinha.mil.br
+ * @mail	gadelha.ti@gmail.com
  * @since	19/06/2020
  * @version 1.0
  * @link	www.gadelha.eti.br
