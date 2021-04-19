@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.eti.gadelha</groupId>
 	<artifactId>application</artifactId>
-	<packaging>war</packaging>
+<!--	<packaging>war</packaging>-->
 	<version>0.0.1-SNAPSHOT</version>
 	<name>application</name>
 	<description>Project for Spring Boot</description>
