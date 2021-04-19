@@ -14,8 +14,8 @@ import java.util.Optional;
 public interface GenericDAO<T,K> {
     public abstract T create(T objeto);
     public abstract List<T> retrieve();
-    public abstract T retrieveOne(K id);
-    public abstract Optional<T> retrieve(K id);
+    public abstract T retrieve(K id);
+    public abstract Optional<T> retrieveOptional(K id);
     public abstract T update(T objeto);
     public abstract void delete(K id);
 }

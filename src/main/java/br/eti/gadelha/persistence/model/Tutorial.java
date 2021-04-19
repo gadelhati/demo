@@ -1,65 +1,38 @@
 package br.eti.gadelha.persistence.model;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
+/**
+ * @author	Marcelo Ribeiro Gadelha
+ * @mail	marcelo.gadelha@marinha.mil.br
+ * @since	19/06/2020
+ * @version 1.0
+ * @link	www.gadelha.eti.br
+ **/
+
 @Entity
-@Table(name = "tutorials")
+@Table
+@AllArgsConstructor @NoArgsConstructor @Data
 public class Tutorial {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
-    @Column(name = "title")
+    @Column
     private String title;
-
-    @Column(name = "description")
+    @Column
     private String description;
-
-    @Column(name = "published")
+    @Column
     private boolean published;
-
-    public Tutorial() {
-
-    }
 
     public Tutorial(String title, String description, boolean published) {
         this.title = title;
         this.description = description;
         this.published = published;
     }
-
-    public long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public boolean isPublished() {
-        return published;
-    }
-
-    public void setPublished(boolean isPublished) {
-        this.published = isPublished;
-    }
-
-    @Override
-    public String toString() {
-        return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
-    }
-
 }

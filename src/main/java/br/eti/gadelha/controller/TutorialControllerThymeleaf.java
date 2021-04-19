@@ -46,7 +46,7 @@ public class TutorialControllerThymeleaf {
     }
     @GetMapping("/update/{id}")
     public ModelAndView update(@PathVariable("id") Long id) {
-        return add(serviceTutorial.retrieveOne(id));
+        return add(serviceTutorial.retrieve(id));
     }
     @GetMapping("/add")
     public ModelAndView add(Tutorial tutorial) {

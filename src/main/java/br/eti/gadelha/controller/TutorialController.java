@@ -20,7 +20,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "http://localhost:8081")
+/**
+ * @author	Marcelo Ribeiro Gadelha
+ * @mail	marcelo.gadelha@marinha.mil.br
+ * @since	19/06/2020
+ * @version 1.0
+ * @link	www.gadelha.eti.br
+ **/
+
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/api")
 public class TutorialController {
