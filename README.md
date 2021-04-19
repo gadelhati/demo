@@ -1,4 +1,7 @@
-# Instruções para API Spring Boot
+# Instruções para API _Spring Boot_
+
+![spring](https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg "Spring Boot!")
+
 ```
 netstat -a -n -o
 tskill "NÚMERO DO PID"
@@ -8,7 +11,7 @@ Para rodar a API, utilize o comando:
 mvn spring-boot:run
 ```
 Isso irá gerar a Base de dados. Acessível através da url.
-Para abrir console do banco de dados H2, acesse:
+Para abrir console do banco de dados **H2**, acesse:
 
 > [http://localhost:8080/h2-ui](http://localhost:8080/h2-ui)
 
@@ -20,7 +23,7 @@ no caso:
 ```
 jdbc:h2:mem:testdb
 ```
-Aplicação Spring Boot para Realizar o controle dos empréstimos de equipamentos e licenças entre as Organizações Militares subordinadas à DHN.: [Acompanhamento do projeto no redemine](https://redmine.chm.mb/projects/siscoep)
+Aplicação _Spring Boot_ para: [Acompanhamento do projeto no redemine](https://redmine.chm.mb/projects/siscoep)
 
 ## Requirements
 
@@ -37,9 +40,9 @@ First, clone the project and build locally:
 git clone http://10.5.193.26/00038059/siscoep
 ```
 
-Para criar o arquivo .war, digite no terminal do intellij:
+Para criar o arquivo _.war_, digite no terminal do _intellij_:
 
-```shell
+```
 mvn clean package
 ```
 
