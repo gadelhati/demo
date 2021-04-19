@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import java.util.UUID;
 
 /**
  * @author	Marcelo Ribeiro Gadelha
@@ -30,7 +28,6 @@ public class TutorialControllerThymeleaf {
 
     @Autowired
     private ServiceTutorial serviceTutorial;
-    RestTemplate restTemplate = new RestTemplate();
 
     @PostMapping("/create")
     public ModelAndView create(@Valid Tutorial tutorial, BindingResult bindingResult) {
@@ -53,8 +50,10 @@ public class TutorialControllerThymeleaf {
         return new ModelAndView("/tutorialADD").addObject("tutorial", tutorial);
     }
     @GetMapping("/delete/{id}")
-    public ModelAndView delete(@PathVariable("id") @NotBlank UUID id) {
-        Tutorial objeto = restTemplate.getForObject("http://localhost:8119/tutorial/delete/" + id, Tutorial.class);
+    public ModelAndView delete(@PathVariable("id") @NotBlank Long id) {
+        if(serviceTutorial.retrieve(id) != null) {
+            serviceTutorial.delete(id);
+        }
         return findAll();
     }
 }
