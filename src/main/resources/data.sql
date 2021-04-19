@@ -1,4 +1,4 @@
---DROP TABLE IF EXISTS billionaires;
+--DROP TABLE IF EXISTS tutorials;
 
 CREATE TABLE tutorials (
   id INT AUTO_INCREMENT  PRIMARY KEY,
