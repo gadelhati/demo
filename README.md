@@ -34,7 +34,7 @@ Aplicação _Spring Boot_ para: [Acompanhamento do projeto no redemine](https://
 For building and running the application you need:
 
 - [x] [JDK](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html) - Neste projeto utilzamos a versão JDK 8 update 211.
-- [ ] [Lombok](https://projectlombok.org/) - Download the Lombok plugin for your IDE. This is required to add Lombok dependency support.
+- [x] [Lombok](https://projectlombok.org/) - Download the Lombok plugin for your IDE. This is required to add Lombok dependency support.
 
 ## Running
 
@@ -51,3 +51,6 @@ mvn clean package
 ```
 
 serão criados dois arquivos com a extensão .war, o com nome menor é o que será utilizado.
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+
