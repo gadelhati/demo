@@ -26,8 +26,12 @@ import javax.validation.constraints.NotBlank;
 @RequestMapping(value= "/tutorialMV")
 public class TutorialControllerThymeleaf {
 
+    private final ServiceTutorial serviceTutorial;
+
     @Autowired
-    private ServiceTutorial serviceTutorial;
+    public TutorialControllerThymeleaf(ServiceTutorial serviceTutorial) {
+        this.serviceTutorial = serviceTutorial;
+    }
 
     @PostMapping("/create")
     public ModelAndView create(@Valid Tutorial tutorial, BindingResult bindingResult) {

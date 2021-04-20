@@ -33,8 +33,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class TutorialController {
 
+    public final TutorialRepository tutorialRepository;
+
     @Autowired
-    TutorialRepository tutorialRepository;
+    private TutorialController(TutorialRepository tutorialRepository) {
+        this.tutorialRepository = tutorialRepository;
+    }
 
     @GetMapping("/tutorials")
     public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {

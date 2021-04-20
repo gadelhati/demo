@@ -19,8 +19,12 @@ import java.util.Optional;
 @Service
 public class ServiceTutorial implements GenericDAO<Tutorial, Long> {
 
+    private final TutorialRepository tutorialRepository;
+
     @Autowired
-    private TutorialRepository tutorialRepository;
+    public ServiceTutorial(TutorialRepository tutorialRepository) {
+        this.tutorialRepository = tutorialRepository;
+    }
 
     public Tutorial create(Tutorial objeto) {
         return tutorialRepository.save(objeto);
