@@ -21,7 +21,7 @@
                     </button>
                     <a class="navbar-brand" href="#" th:href="@{/tutorialMV/retrieve}">Application</a>
                 </div>
-<!--                <div class="navbar-collapse collapse">-->
+                <div class="navbar-collapse collapse">
 <!--                    <ul class="nav navbar-nav" th:if="${#authorization.expression('isAuthenticated()')}">-->
 <!--                        <li th:classappend="${module == 'home' ? 'active' : ''}">-->
 <!--                            <a href="#" th:href="@{/cessaoMV/retrieve/}">Movimentação</a>-->
@@ -53,7 +53,10 @@
 <!--                            </li>-->
 <!--                        </ul>-->
 <!--                    </ul>-->
-<!--                    <ul class="nav navbar-nav navbar-right">-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/swagger-ui.html">Swagger-UI</a>
+                        </li>
 <!--                        <li th:if="${#authorization.expression('!isAuthenticated()')}">-->
 <!--                            <a href="/login" th:href="@{/login}">-->
 <!--                                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Login-->
@@ -67,8 +70,8 @@
 <!--                            </a>-->
 <!--                            <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>-->
 <!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

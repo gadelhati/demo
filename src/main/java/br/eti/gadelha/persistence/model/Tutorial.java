@@ -1,7 +1,5 @@
 package br.eti.gadelha.persistence.model;
 
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,9 +13,7 @@ import javax.persistence.*;
  * @link	www.gadelha.eti.br
  **/
 
-@Entity
-@Table
-@AllArgsConstructor @NoArgsConstructor @Data
+@Entity @Table @Data @NoArgsConstructor
 public class Tutorial {
 
     @Id
