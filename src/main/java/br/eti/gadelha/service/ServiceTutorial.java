@@ -40,7 +40,12 @@ public class ServiceTutorial implements GenericDAO<Tutorial, Long> {
     public void delete(Long id) {
         tutorialRepository.deleteById(id);
     }
+    public void deleteAll() {
+        tutorialRepository.deleteAll();
+    }
 
+    public List<Tutorial> findByPublished(Boolean published) { return tutorialRepository.findByPublished(published); }
+    public List<Tutorial> titleContaining(String title) { return tutorialRepository.findByTitleContaining(title); }
     public boolean isTitleValid(String value) {
         return tutorialRepository.existsByTitle(value);
     }
