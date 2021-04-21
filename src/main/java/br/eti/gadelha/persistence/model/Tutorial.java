@@ -1,6 +1,6 @@
 package br.eti.gadelha.persistence.model;
 
-import br.eti.gadelha.exception.annotation.UniqueNameTutorial;
+import br.eti.gadelha.exception.annotation.UniqueTitleTutorial;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -20,7 +20,7 @@ public class Tutorial {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column @UniqueNameTutorial
+    @Column //@UniqueTitleTutorial
     private String title;
     @Column
     private String description;
