@@ -44,8 +44,9 @@ public class ServiceTutorial implements GenericDAO<Tutorial, Long> {
         tutorialRepository.deleteAll();
     }
 
+    public List<Tutorial> titleContaining(String title) { return tutorialRepository.findByTitleContainingIgnoreCaseOrderByTitleAsc(title); }
     public List<Tutorial> findByPublished(Boolean published) { return tutorialRepository.findByPublished(published); }
-    public List<Tutorial> titleContaining(String title) { return tutorialRepository.findByTitleContaining(title); }
+//    public Optional<List<Tutorial>> findByPublishedOptional(Boolean published) { return tutorialRepository.findByPublishedOptional(published); }
     public boolean isTitleValid(String value) {
         return tutorialRepository.existsByTitle(value);
     }
