@@ -56,6 +56,8 @@ public class TutorialController {
     public ResponseEntity<HttpStatus> update(@PathVariable("id") long id, @RequestBody @Valid DTORequestTutorial tutorial) {
         Optional<Tutorial> busca = serviceTutorial.retrieveOptional(id);
         if (busca.isPresent()) {
+            busca = Optional.ofNullable(tutorial.toObject());
+            busca.get().setId(id);
             serviceTutorial.create(busca.get());
             return new ResponseEntity<>(HttpStatus.OK);
         } else {
