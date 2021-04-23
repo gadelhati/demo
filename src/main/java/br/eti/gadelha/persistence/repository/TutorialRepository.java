@@ -4,6 +4,7 @@ import br.eti.gadelha.persistence.model.Tutorial;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author	Marcelo Ribeiro Gadelha
@@ -15,7 +16,9 @@ import java.util.List;
 
 public interface TutorialRepository extends JpaRepository<Tutorial, Long> {
     List<Tutorial> findByPublished(boolean published);
-    List<Tutorial> findByTitleContaining(String title);
+//    Optional<List<Tutorial>> findByPublishedOptional(boolean published);
+    List<Tutorial> findByTitleContainingIgnoreCaseOrderByTitleAsc(String title);
+//    Optional<List<Tutorial>> findAllTitleContainingIgnoreCaseOrderByTitleAsc();
     List<Tutorial> findAllByOrderByTitleDesc();
     boolean existsByTitle(String title);
 }
