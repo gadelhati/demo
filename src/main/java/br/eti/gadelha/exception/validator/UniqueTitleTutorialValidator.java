@@ -15,6 +15,5 @@ public class UniqueTitleTutorialValidator implements ConstraintValidator<UniqueT
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         return value != null && !serviceTutorial.isTitleValid(value);
-//        return true;
     }
 }
