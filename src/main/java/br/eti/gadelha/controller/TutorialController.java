@@ -35,10 +35,10 @@ public class TutorialController {
     }
 
     @PostMapping("/tutorial")
-    public ResponseEntity<DTOResponseTutorial> create(@RequestBody @Valid DTORequestTutorial tutorial) {
+    public ResponseEntity<DTOResponseTutorial> create(@RequestBody @Valid DTORequestTutorial dtoRequestTutorial) {
         try {
-            Tutorial tutorial1 = serviceTutorial.create(tutorial.toObject());
-            return new ResponseEntity<>(DTOResponseTutorial.toDTO(tutorial1), HttpStatus.CREATED);
+            Tutorial tutorial = serviceTutorial.create(dtoRequestTutorial.toObject());
+            return new ResponseEntity<>(DTOResponseTutorial.toDTO(tutorial), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -47,7 +47,7 @@ public class TutorialController {
     public ResponseEntity<DTOResponseTutorial> retrieve(@PathVariable("id") long id) {
         Optional<Tutorial> tutorial = serviceTutorial.retrieveOptional(id);
         if (tutorial.isPresent()) {
-            return new ResponseEntity<>(DTOResponseTutorial.toDTO(tutorial.get()), HttpStatus.OK);
+            return new ResponseEntity<>(DTOResponseTutorial.toDTO(tutorial.get()), HttpStatus.FOUND);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
