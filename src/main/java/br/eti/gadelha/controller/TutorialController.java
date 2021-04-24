@@ -53,10 +53,10 @@ public class TutorialController {
         }
     }
     @PutMapping("/tutorial/{id}")
-    public ResponseEntity<HttpStatus> update(@PathVariable("id") long id, @RequestBody @Valid DTORequestTutorial tutorial) {
+    public ResponseEntity<HttpStatus> update(@PathVariable("id") long id, @RequestBody @Valid DTORequestTutorial dtoRequestTutorial) {
         Optional<Tutorial> busca = serviceTutorial.retrieveOptional(id);
         if (busca.isPresent()) {
-            busca = Optional.ofNullable(tutorial.toObject());
+            busca = Optional.ofNullable(dtoRequestTutorial.toObject());
             busca.get().setId(id);
             serviceTutorial.create(busca.get());
             return new ResponseEntity<>(HttpStatus.OK);
@@ -83,21 +83,6 @@ public class TutorialController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-    //FALTANDO
-    @GetMapping("/tutorial/published")
-    public ResponseEntity<List<Tutorial>> findByPublished() {
-        try {
-            List<Tutorial> tutorials = serviceTutorial.findByPublished(true);
-            if (tutorials.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-            return new ResponseEntity<>(tutorials, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-    //FALTANDO
     @GetMapping("/tutorial") //@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<List<Tutorial>> retrieveAll(@RequestParam(required = false) String title) {
         try {
@@ -112,6 +97,20 @@ public class TutorialController {
             return new ResponseEntity<>(tutorials, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    //FALTANDO
+    @GetMapping("/tutorial/published")
+    public ResponseEntity<List<Tutorial>> findByPublished() {
+        try {
+            List<Tutorial> tutorials = serviceTutorial.findByPublished(true);
+            if (tutorials.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(tutorials, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
