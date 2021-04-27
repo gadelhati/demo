@@ -23,7 +23,10 @@
             <table class="table table-sm table-striped table-hover table-bordered">
                 <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Title</th>
+                    <th>Description</th>
+                    <th>QR Code ID</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -32,7 +35,9 @@
                         <h2 th:case="null">Sem resgistros na tabela</h2>
                         <div th:case="*">
                             <tr th:each="tutorial : ${tutorials}">
+                                <td th:text="${tutorial.id}"></td>
                                 <td th:text="${tutorial.title}"></td>
+                                <td th:text="${tutorial.description}"></td>
                                 <td><img th:src="@{/qrcode/{id}(id=${tutorial.id})}" width="100" height="100"></td>
                                 <td>
                                     <div class="btn-group pull-right">
