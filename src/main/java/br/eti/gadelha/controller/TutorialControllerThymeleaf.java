@@ -33,7 +33,7 @@ public class TutorialControllerThymeleaf {
         this.serviceTutorial = serviceTutorial;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public ModelAndView create(@Valid Tutorial tutorial, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
             return add(tutorial);
@@ -49,7 +49,7 @@ public class TutorialControllerThymeleaf {
         }
         return findAll();
     }
-    @GetMapping("/retrieve")
+    @GetMapping
     public ModelAndView findAll() {
         return new ModelAndView("tutorial").addObject("tutorials", serviceTutorial.retrieve());
     }
