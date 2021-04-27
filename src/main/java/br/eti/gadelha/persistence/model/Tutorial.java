@@ -15,11 +15,8 @@ import javax.persistence.*;
  **/
 
 @Entity @Table @Data @NoArgsConstructor
-public class Tutorial {
+public class Tutorial extends GenericEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
     @Column //@UniqueTitleTutorial
     private String title;
     @Column

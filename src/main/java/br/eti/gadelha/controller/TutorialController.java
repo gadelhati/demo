@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 /**
  * @author	Marcelo Ribeiro Gadelha
@@ -44,7 +45,7 @@ public class TutorialController {
         }
     }
     @GetMapping("/tutorial/{id}")
-    public ResponseEntity<DTOResponseTutorial> retrieve(@PathVariable("id") long id) {
+    public ResponseEntity<DTOResponseTutorial> retrieve(@PathVariable("id") UUID id) {
         final Optional<Tutorial> tutorial = serviceTutorial.retrieveOptional(id);
         if (tutorial.isPresent()) {
             return new ResponseEntity<>(DTOResponseTutorial.toDTO(tutorial.get()), HttpStatus.FOUND);
@@ -53,7 +54,7 @@ public class TutorialController {
         }
     }
     @PutMapping("/tutorial/{id}")
-    public ResponseEntity<HttpStatus> update(@PathVariable("id") long id, @RequestBody @Valid DTORequestTutorial dtoRequestTutorial) {
+    public ResponseEntity<HttpStatus> update(@PathVariable("id") UUID id, @RequestBody @Valid DTORequestTutorial dtoRequestTutorial) {
         Optional<Tutorial> busca = serviceTutorial.retrieveOptional(id);
         if (busca.isPresent()) {
             busca = Optional.ofNullable(dtoRequestTutorial.toObject());
@@ -65,7 +66,7 @@ public class TutorialController {
         }
     }
     @DeleteMapping("/tutorial/{id}")
-    public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable("id") UUID id) {
         final Optional<Tutorial> tutorial = serviceTutorial.retrieveOptional(id);
         if (tutorial.isPresent()) {
             serviceTutorial.delete(id);

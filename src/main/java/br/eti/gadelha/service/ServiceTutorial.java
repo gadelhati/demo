@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 /**
  * @author	Marcelo Ribeiro Gadelha
@@ -17,7 +18,7 @@ import java.util.Optional;
  **/
 
 @Service
-public class ServiceTutorial implements GenericDAO<Tutorial, Long> {
+public class ServiceTutorial implements GenericDAO<Tutorial, UUID> {
 
     private final TutorialRepository tutorialRepository;
 
@@ -32,12 +33,12 @@ public class ServiceTutorial implements GenericDAO<Tutorial, Long> {
     public List<Tutorial> retrieve(){
         return tutorialRepository.findAll();
     }
-    public Optional<Tutorial> retrieveOptional(Long id) { return tutorialRepository.findById(id); }
-    public Tutorial retrieve(Long id) { return tutorialRepository.getOne(id); }
+    public Optional<Tutorial> retrieveOptional(UUID id) { return tutorialRepository.findById(id); }
+    public Tutorial retrieve(UUID id) { return tutorialRepository.getOne(id); }
     public Tutorial update(Tutorial objeto) {
         return tutorialRepository.save(objeto);
     }
-    public void delete(Long id) {
+    public void delete(UUID id) {
         tutorialRepository.deleteById(id);
     }
     public void deleteAll() {

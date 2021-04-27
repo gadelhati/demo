@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 /**
  * @author	Marcelo Ribeiro Gadelha
@@ -14,7 +15,7 @@ import java.util.Optional;
  * @link	www.gadelha.eti.br
  **/
 
-public interface TutorialRepository extends JpaRepository<Tutorial, Long> {
+public interface TutorialRepository extends JpaRepository<Tutorial, UUID> {
     List<Tutorial> findByPublished(boolean published);
 //    Optional<List<Tutorial>> findByPublishedOptional(boolean published);
     List<Tutorial> findByTitleContainingIgnoreCaseOrderByTitleAsc(String title);
