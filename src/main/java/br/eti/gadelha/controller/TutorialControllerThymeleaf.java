@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import java.util.UUID;
 
 /**
  * @author	Marcelo Ribeiro Gadelha
@@ -53,7 +54,7 @@ public class TutorialControllerThymeleaf {
         return new ModelAndView("tutorial").addObject("tutorials", serviceTutorial.retrieve());
     }
     @GetMapping("/update/{id}")
-    public ModelAndView update(@PathVariable("id") Long id) {
+    public ModelAndView update(@PathVariable("id") UUID id) {
         return add(serviceTutorial.retrieve(id));
     }
     @GetMapping("/add")
@@ -61,7 +62,7 @@ public class TutorialControllerThymeleaf {
         return new ModelAndView("tutorialADD").addObject("tutorial", tutorial);
     }
     @GetMapping("/delete/{id}")
-    public ModelAndView delete(@PathVariable("id") @NotBlank Long id) {
+    public ModelAndView delete(@PathVariable("id") @NotBlank UUID id) {
         if(serviceTutorial.retrieve(id) != null) {
             serviceTutorial.delete(id);
         }
