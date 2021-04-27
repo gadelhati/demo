@@ -37,7 +37,7 @@ public class TutorialController {
     @PostMapping("/tutorial")
     public ResponseEntity<DTOResponseTutorial> create(@RequestBody @Valid DTORequestTutorial dtoRequestTutorial) {
         try {
-            Tutorial tutorial = serviceTutorial.create(dtoRequestTutorial.toObject());
+            final Tutorial tutorial = serviceTutorial.create(dtoRequestTutorial.toObject());
             return new ResponseEntity<>(DTOResponseTutorial.toDTO(tutorial), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -45,7 +45,7 @@ public class TutorialController {
     }
     @GetMapping("/tutorial/{id}")
     public ResponseEntity<DTOResponseTutorial> retrieve(@PathVariable("id") long id) {
-        Optional<Tutorial> tutorial = serviceTutorial.retrieveOptional(id);
+        final Optional<Tutorial> tutorial = serviceTutorial.retrieveOptional(id);
         if (tutorial.isPresent()) {
             return new ResponseEntity<>(DTOResponseTutorial.toDTO(tutorial.get()), HttpStatus.FOUND);
         } else {
@@ -66,7 +66,7 @@ public class TutorialController {
     }
     @DeleteMapping("/tutorial/{id}")
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") long id) {
-        Optional<Tutorial> tutorial = serviceTutorial.retrieveOptional(id);
+        final Optional<Tutorial> tutorial = serviceTutorial.retrieveOptional(id);
         if (tutorial.isPresent()) {
             serviceTutorial.delete(id);
             return new ResponseEntity<>(HttpStatus.OK);
@@ -86,7 +86,7 @@ public class TutorialController {
     @GetMapping("/tutorial") //@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<List<Tutorial>> retrieveAll(@RequestParam(required = false) String title) {
         try {
-            List<Tutorial> tutorials = new ArrayList<>();
+            final List<Tutorial> tutorials = new ArrayList<>();
             if (title == null)
                 serviceTutorial.retrieve().forEach(tutorials::add);
             else
@@ -104,7 +104,7 @@ public class TutorialController {
     @GetMapping("/tutorial/published")
     public ResponseEntity<List<Tutorial>> findByPublished() {
         try {
-            List<Tutorial> tutorials = serviceTutorial.findByPublished(true);
+            final List<Tutorial> tutorials = serviceTutorial.findByPublished(true);
             if (tutorials.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
