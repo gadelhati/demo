@@ -33,6 +33,7 @@
                         <div th:case="*">
                             <tr th:each="tutorial : ${tutorials}">
                                 <td th:text="${tutorial.title}"></td>
+                                <td><img th:src="@{/qrcode/{id}(id=${tutorial.id})}" width="100" height="100"></td>
                                 <td>
                                     <div class="btn-group pull-right">
                                         <a class="btn btn-sm btn-primary" th:href="@{/tutorialMV/update/{id}(id=${tutorial.id})}" >Editar</a>
