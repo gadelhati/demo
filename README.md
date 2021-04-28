@@ -47,7 +47,7 @@
 	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/>
 </a>
 
-[![Spring Boot](https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg "Spring Boot!")*Spring Boot*][]
+![Spring Boot](https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg "Spring Boot!")
 
 <p><a><img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" width="100" height="100"></a></p>
 
