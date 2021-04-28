@@ -47,21 +47,7 @@
 	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/>
 </a>
 
-![Spring Boot](https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg "Spring Boot!")
-
-<p><a><img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" width="100" height="100"></a></p>
-
-<p align="left">
-<a href="https://getbootstrap.com" target="_blank">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"/>
-</a>
-</p>
-
-<style>
-img[src~="bordered"] {
-border: 1px solid black;
-}
-</style>
+[comment]: <> (![Spring Boot]&#40;https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg "Spring Boot!"&#41;)
 
 ### Link para criação de um projeto similar, acesse:
 
