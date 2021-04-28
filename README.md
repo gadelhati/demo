@@ -29,9 +29,11 @@
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
 	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40"/>
 </a>
-<a href="https://www.jenkins.io" target="_blank">
-	<img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="40"/>
-</a>
+
+[comment]: <> (<a href="https://www.jenkins.io" target="_blank">)
+[comment]: <> (	<img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="40"/>)
+[comment]: <> (</a>)
+
 <a href="https://www.linux.org/" target="_blank">
 	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40"	/>
 </a>
@@ -43,9 +45,6 @@
 </a>
 <a href="https://redux.js.org" target="_blank">
 	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/>
-</a>
-<a href="https://spring.io/" target="_blank">
-	<img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/>
 </a>
 
 [![Spring Boot](https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg "Spring Boot!")*Spring Boot*][]
