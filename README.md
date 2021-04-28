@@ -10,8 +10,8 @@
 <a href="https://spring.io/" target="_blank">
 	<img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/>
 </a>
-<a href="https://www.sqlite.org/" target="_blank">
-	<img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/>
+<a href="https://www.h2database.com/" target="_blank">
+	<img src="https://www.h2database.com/html/images/h2-logo-2.png" alt="sqlite" width="40" height="40"/>
 </a>
 
 [![Spring Boot](https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg "Spring Boot!")*Spring Boot*][]
