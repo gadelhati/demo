@@ -5,10 +5,10 @@
 ### Tecnologias utilizadas:
 
 <a href="https://redux.js.org" target="_blank">
-	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/>
+	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" height="40"/>
 </a>
 <a href="https://spring.io/" target="_blank">
-	<img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/>
+	<img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" height="40"/>
 </a>
 <a href="https://www.h2database.com/" target="_blank">
 	<img src="https://www.h2database.com/html/images/h2-logo-2.png" alt="h2" height="40"/>
