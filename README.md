@@ -1,6 +1,9 @@
 # Instruções para API _Spring Boot_
 
-[][https://img.shields.io/github/stars/gadelhati/demo?style=social]
+![](https://img.shields.io/github/stars/gadelhati/demo?style=social)
+![](https://img.shields.io/badge/java-8-007fff)
+![](https://img.shields.io/badge/springboot-2.4.5-00ff80)
+![](https://img.shields.io/badge/react-17.0.2-40e0d0)
 
 ### Tecnologias utilizadas:
 
@@ -81,13 +84,13 @@ Para abrir console do banco de dados **H2**, acesse:
 
 Relative links
 
-## HTTP Status code list:
+### HTTP Status code list:
 
 > [HHTP Status Code](https://httpstatuses.com/)
 
 Relative links
 
-## Altere a JDBC URL para o path descrito no console:
+### Altere a JDBC URL para o path descrito no console:
 ```
 2021-04-18 21:44:01.317  INFO 7560 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:testdb'
 ```
@@ -99,14 +102,14 @@ Aplicação _Spring Boot_ para: [Acompanhamento do projeto no redemine](https://
 
 Relative links
 
-## Requirements
+### Requirements
 
 For building and running the application you need:
 
 - [x] [JDK](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html) - Neste projeto utilzamos a versão JDK 8 update 211.
 - [x] [Lombok](https://projectlombok.org/) - Download the Lombok plugin for your IDE. This is required to add Lombok dependency support.
 
-## Running
+### Running
 
 First, clone the project and build locally:
 
