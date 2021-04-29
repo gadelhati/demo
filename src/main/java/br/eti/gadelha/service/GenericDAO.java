@@ -18,4 +18,5 @@ public interface GenericDAO<T,K> {
     public abstract Optional<T> retrieveOptional(K id);
     public abstract T update(T objeto);
     public abstract void delete(K id);
+    public abstract void deleteAll();
 }
