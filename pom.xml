@@ -115,6 +115,12 @@
 			<artifactId>hibernate-envers</artifactId>
 			<version>5.4.30.Final</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/pl.project13.maven/git-commit-id-plugin -->
+		<dependency>
+			<groupId>pl.project13.maven</groupId>
+			<artifactId>git-commit-id-plugin</artifactId>
+			<version>4.0.4</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -122,6 +128,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.2.7.RELEASE</version>
 				<configuration>
 					<excludes>
 						<exclude>
@@ -130,6 +137,28 @@
 						</exclude>
 					</excludes>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+				<version>4.0.4</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>revision</goal>
+						</goals>
+					</execution>
+				</executions>
+<!--				<configuration>-->
+<!--					<dotGitDirectory>${project.basedir}/../.git</dotGitDirectory>-->
+<!--				</configuration>-->
 			</plugin>
 		</plugins>
 	</build>
