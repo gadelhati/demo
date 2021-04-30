@@ -1,6 +1,6 @@
 os: xenial
 language: java
-sudo: false
+sudo: true
 jdk: openjdk8
 install: true
 cache:
