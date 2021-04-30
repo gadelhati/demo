@@ -1,13 +1,13 @@
+os: windows
 sudo: false
 language: java
-cache:
-  directories:
-    - "$HOME/.cache"
-
-before_install:
-  - cp .travis.settings.xml $HOME/.m2/settings.xml
-
-deploy:
-  provider: script
-  script: "mvn -B -V deploy"
-  skip_cleanup: true
+#jdk: openjdk8
+#install: true
+#cache:
+#  directories:
+#    - .autoconf
+#    - $HOME/.m2
+#notifications:
+#  email: gadelha.ti@gmail.com
+#before_install:
+#  - chmod +x mvnw
