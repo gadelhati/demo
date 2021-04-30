@@ -1,6 +1,6 @@
 os: windows
 language: java
-sudo: true
+#sudo: true
 jdk: openjdk8
 install: true
 cache:
