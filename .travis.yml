@@ -1,4 +1,4 @@
-os: windows
+os: xenial
 language: java
 sudo: false
 jdk: openjdk8
