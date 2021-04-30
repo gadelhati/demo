@@ -1,4 +1,3 @@
-os: xeniel
 sudo: false
 language: java
 jdk: openjdk8
