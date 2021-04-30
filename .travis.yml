@@ -9,4 +9,4 @@ cache:
 notifications:
   email: gadelha.ti@gmail.com
 before_install:
-  chmod +x mvnw
+  - chmod +x mvnw
