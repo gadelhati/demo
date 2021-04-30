@@ -8,5 +8,5 @@ cache:
     - $HOME/.m2
 notifications:
   email: gadelha.ti@gmail.com
-#before_install:
-#  - chmod +x mvnw
+before_install:
+  - chmod +x mvnw
