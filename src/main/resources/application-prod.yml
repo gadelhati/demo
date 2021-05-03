@@ -1,6 +1,24 @@
 spring:
+  datasource:
+    url: jdbc:h2:mem:bookstore_prd;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT-FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    datasource: org.hibernate.dialect.W2Dialect
+    show-sql: false
+    properties:
+      hibernate:
+        format-sql: false
+  h2:
+    conlose:
+      enable: false
   devtools:
     restart:
       enabled: false
     livereload:
-      enabled: false
+      #      enabled: false
+      level:
+        br:
+          eti:
+            gadelha: INFO
