@@ -9,7 +9,7 @@ spring:
     show-sql: true
     properties:
       hibernate:
-          format-sql: true
+        format-sql: true
   h2:
     conlose:
       enable: true
