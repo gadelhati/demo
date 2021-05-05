@@ -1,5 +1,6 @@
 package br.eti.gadelha.persistence.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
@@ -8,17 +9,10 @@ import lombok.Getter;
  * @link	www.gadelha.eti.br
  **/
 
-@Getter
+@Getter @AllArgsConstructor
 public enum Gender {
     MALE("Male"),
     FEMALE("Female");
 
     String gender;
-
-    private Gender(String gender) {
-        this.gender = gender;
-    }
-    public String getRole() {
-        return this.gender;
-    }
 }

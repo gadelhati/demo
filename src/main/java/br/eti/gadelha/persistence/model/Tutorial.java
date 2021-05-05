@@ -26,6 +26,8 @@ public class Tutorial extends GenericEntity {
     private String description;
     @Column
     private boolean published;
+    @Embedded
+    private Audit audit;
 
     public Tutorial(String title, String description, boolean published) {
         this.title = title;

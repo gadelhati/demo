@@ -1,7 +1,9 @@
 package br.eti.gadelha.exception;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -19,5 +21,8 @@ public class ErrorResponse {
     private final int code;
     private final String status;
     private final String objectName;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     private final List<ErrorObject> errors;
+
+//    private final LocalDateTime localDateTime;
 }
